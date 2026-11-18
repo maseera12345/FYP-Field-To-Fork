@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import PublicLayout from "./components/layout/PublicLayout";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import DesignSystem from "./pages/DesignSystem";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
@@ -17,6 +18,7 @@ export default function App() {
     <Routes>
       <Route element={<PublicLayout />}>
         <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
         <Route path="design-system" element={<DesignSystem />} />
         {plannedPublicRoutes.map((p) => (
           <Route key={p} path={p} element={<ComingSoon />} />
