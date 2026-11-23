@@ -1,0 +1,8 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+# model weights are large: share them via Drive / Git LFS instead
+model/*.keras
+model/*.h5
