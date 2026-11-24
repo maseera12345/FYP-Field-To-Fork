@@ -6,6 +6,8 @@ import About from "./pages/About";
 import DesignSystem from "./pages/DesignSystem";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
+import Marketplace from "./pages/Marketplace";
+import MandiPrices from "./pages/MandiPrices";
 
 // Public pages that are planned but not built yet (they render <ComingSoon />).
 const plannedPublicRoutes = [
@@ -19,6 +21,8 @@ export default function App() {
       <Route element={<PublicLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="marketplace" element={<Marketplace />} />
+        <Route path="mandi-prices" element={<MandiPrices />} />
         <Route path="design-system" element={<DesignSystem />} />
         {plannedPublicRoutes.map((p) => (
           <Route key={p} path={p} element={<ComingSoon />} />
